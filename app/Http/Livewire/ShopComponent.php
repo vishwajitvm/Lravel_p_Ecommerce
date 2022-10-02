@@ -40,7 +40,7 @@ class ShopComponent extends Component
 
         else {
             $products = Product::paginate(12) ;
-    }
+        }
         
         // $products = Product::paginate(12) ;
         return view('livewire.shop-component' , ['products' => $products])->layout('layouts.base');
