@@ -7,6 +7,7 @@ use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Foundation\Testing\WithoutEvents;
 use Livewire\Component;
 use Livewire\WithPagination ;
+use App\Models\Category ;
 
 class ShopComponent extends Component
 {
@@ -37,12 +38,13 @@ class ShopComponent extends Component
         else if($this->sorting == 'price-desc') {
             $products = Product::orderBy('regular_price' , 'DESC')->paginate($this->pagesize) ;
         }
-
         else {
             $products = Product::paginate(12) ;
         }
+
+        $categories = Category::all() ;
         
         // $products = Product::paginate(12) ;
-        return view('livewire.shop-component' , ['products' => $products])->layout('layouts.base');
+        return view('livewire.shop-component' , ['products' => $products , 'categories' => $categories])->layout('layouts.base');
     }
 }

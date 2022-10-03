@@ -2,6 +2,7 @@
 
 use App\Http\Livewire\Admin\AdminDashboardComponent;
 use App\Http\Livewire\CartComponent;
+use App\Http\Livewire\CategoryComponent;
 use App\Http\Livewire\CheckoutComponent;
 use App\Http\Livewire\DetailsComponent;
 use App\Http\Livewire\HomeComponent;
@@ -42,6 +43,9 @@ Route::get('/checkout' , CheckoutComponent::class) ;
 
 //*****PRODUCT DETAILS*****
 Route::get('/product/{slug}' , DetailsComponent::class)->name('product.details') ;
+
+//*****PRODUCT CATEGORY*****
+Route::get('/product-category/{category_slug}' , CategoryComponent::class)->name('product.category') ;
 
 
 //Dashboard route for USER

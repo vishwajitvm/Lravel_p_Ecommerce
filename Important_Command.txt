@@ -1,0 +1,1 @@
+php artisan make:livewire CategoryComponent     <===>    Create Livewire component and controller along with them
