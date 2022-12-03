@@ -38,7 +38,9 @@
                                     <td> {{ $category->id }} </td>
                                     <td> {{ Str::title($category->name) }} </td>
                                     <td> {{ $category->slug }} </td>
-                                    <td> action </td>
+                                    <td> 
+                                        <a href="{{ Route('admin.editcategory',['category_slug'=>$category->slug]) }}" class="btn btn-sm btn-primary"> <i class="fa fa-edit fa-1x"> </i> Edits </a>
+                                    </td>
                                 </tr>
                                 @endforeach
                             </tbody>
