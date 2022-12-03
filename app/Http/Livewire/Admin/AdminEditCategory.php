@@ -22,7 +22,7 @@ class AdminEditCategory extends Component
     }
 
     //genrate slug 
-    public function genrateslug() {
+    public function generateslug() {
         $this->slug = Str::slug($this->name) ;
     }
 
@@ -32,7 +32,7 @@ class AdminEditCategory extends Component
         $category->name = $this->name ;
         $category->slug = $this->slug ;
         $category->save() ;
-        session()->flash('message' , 'Category has been updated successfully') ;
+        return redirect()->route('admin.categories')->with('message' , 'Category has been updated successfully') ;
 
     }
 
