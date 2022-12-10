@@ -16,7 +16,7 @@
                             <div class="col-md-6">
                                 Add New Product
                             </div><div class="col-md-6">
-                                <a href="{{ Route('admin.addcategory') }}" class="btn btn-success pull-right">Add Product</a>
+                                <a href="{{ Route('admin.addproduct') }}" class="btn btn-success pull-right">Add Product</a>
                             </div>
                         </div>
                     </div>
