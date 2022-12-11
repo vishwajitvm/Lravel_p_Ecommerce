@@ -54,7 +54,7 @@
                                     <td> 
                                         <a href="{{ Route('admin.editproduct',['product_slug'=>$product->slug]) }}" class="btn btn-sm btn-primary"> <i class="fa fa-edit fa-1x"> </i> Edit </a>
 
-                                        <a href="" class="btn btn-sm btn-danger" wire:click.prevent="deleteCategory({{ $product->id }})"> <i class="fa fa-trash fa-1x"> </i> Delete </a>
+                                        <a href="" class="btn btn-sm btn-danger" wire:click.prevent="deleteProduct({{ $product->id }})"> <i class="fa fa-trash fa-1x"> </i> Delete </a>
 
                                         
 
